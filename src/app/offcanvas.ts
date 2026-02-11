@@ -65,17 +65,44 @@ import { Component } from '@angular/core';
   </div>
 
   <!-- CLASES PRINCIPALES -->
-  <h3 class="component-title mt-5" style="font-size:1.3rem;">Clases principales</h3>
+  <h5 class="section-label">Clases principales</h5>
 
-  <ul class="feature-list">
-    <li><code>.offcanvas</code> (Contenedor principal)</li>
-    <li><code>.offcanvas-start</code> (Desde la izquierda)</li>
-    <li><code>.offcanvas-end</code> (Desde la derecha)</li>
-    <li><code>.offcanvas-bottom</code> (Desde abajo)</li>
-    <li><code>.offcanvas-header</code> (Encabezado)</li>
-    <li><code>.offcanvas-body</code> (Contenido)</li>
-  </ul>
-
+<div class="code-block">
+  <table class="custom-table">
+    <thead>
+      <tr>
+        <th>Clase</th>
+        <th>Función</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>.offcanvas</code></td>
+        <td>Contenedor principal</td>
+      </tr>
+      <tr>
+        <td><code>.offcanvas-start</code></td>
+        <td>Desde la izquierda</td>
+      </tr>
+      <tr>
+        <td><code>.offcanvas-end</code></td>
+        <td>Desde la derecha</td>
+      </tr>
+      <tr>
+        <td><code>.offcanvas-bottom</code></td>
+        <td>Desde abajo</td>
+      </tr>
+      <tr>
+        <td><code>.offcanvas-header</code></td>
+        <td>Encabezado</td>
+      </tr>
+      <tr>
+        <td><code>.offcanvas-body</code></td>
+        <td>Contenido</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
   <!-- DATO -->
   <div class="code-block mt-4">
     <div class="code-label">Dato</div>

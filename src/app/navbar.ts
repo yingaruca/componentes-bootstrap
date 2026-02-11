@@ -3,88 +3,148 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-navbar-demo',
   standalone: true,
-  template: `<div class="component-section">
-
-  <div class="component-header">
+  template: ` <div class="component-header">
     <span class="component-number">01</span>
     <h2 class="component-title">Navbar</h2>
   </div>
 
   <p class="component-desc">
-    Barra de navegación responsiva que permite organizar enlaces, logos y menús
-    dentro de una página web. Es uno de los componentes más usados porque
-    permite navegar entre secciones o entre diferentes páginas del sitio.
-  </p>
-
-  <!-- SECCIÓN ¿QUÉ ES? -->
-  <h3 class="component-title mt-4" style="font-size:1.3rem;">¿Qué es?</h3>
-
-  <p class="component-desc">
-    Es una barra de navegación responsiva que permite organizar enlaces,
+    El <strong>Navbar</strong> es un componente de navegación de Bootstrap que permite organizar enlaces,
     logos y menús dentro de una página web.
+    Es uno de los componentes más usados porque permite navegar entre secciones
+    de la página o entre diferentes páginas del sitio.
+    Su principal objetivo es ofrecer una navegación clara y accesible en cualquier dispositivo.
   </p>
 
-  <!-- CARACTERÍSTICAS -->
-  <h3 class="component-title mt-4" style="font-size:1.3rem;">Características</h3>
+  <h5 class="section-label">Características principales</h5>
 
   <ul class="feature-list">
-    <li>Se colapsa en móviles con menú hamburguesa</li>
-    <li>Cuenta con soporte para logos y marcas</li>
-    <li>Soporta dropdowns (menús desplegables)</li>
-    <li>Puede incluir formularios (barra de búsqueda)</li>
-    <li>Tiene múltiples esquemas de color</li>
+    <li><strong>Responsivo:</strong> se adapta automáticamente a pantallas pequeñas.</li>
+    <li><strong>Menú hamburguesa:</strong> en móviles, el contenido se colapsa y aparece un botón para desplegarlo.</li>
+    <li><strong>Soporte para marca:</strong> permite incluir un logo o nombre del sitio.</li>
+    <li><strong>Dropdowns:</strong> se pueden añadir menús desplegables dentro de la navegación.</li>
+    <li><strong>Formularios integrados:</strong> como buscadores o botones.</li>
+    <li><strong>Personalización de colores:</strong> mediante clases como 
+      <code>.navbar-light</code>, 
+      <code>.navbar-dark</code>, 
+      <code>.bg-dark</code>, 
+      <code>.bg-primary</code>.
+    </li>
+    <li><strong>Compatibilidad con contenedores:</strong> se suele usar junto a 
+      <code>.container</code> o <code>.container-fluid</code>.
+    </li>
   </ul>
+  <h5 class="section-label">Ejemplo</h5>
 
-  <!-- DEMO FUNCIONAL -->
-  <nav class="navbar navbar-expand-lg bg-dark rounded mt-4">
-    <div class="container-fluid">
-      <a class="navbar-brand text-white">DemoBrand</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded mt-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MiMarca</a>
 
-      <button class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#demoNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#demoNavbar"
+            aria-controls="demoNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="demoNavbar">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-      <div class="collapse navbar-collapse" id="demoNavbar">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link text-white">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white">Servicios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white">Contacto</a>
-          </li>
-        </ul>
-      </div>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Inicio</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Servicios</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"
+             href="#"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
+            Más opciones
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Acción</a></li>
+            <li><a class="dropdown-item" href="#">Otra acción</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Algo más</a></li>
+          </ul>
+        </li>
+
+      </ul>
+
+      <form class="d-flex" role="search">
+        <input class="form-control me-2"
+               type="search"
+               placeholder="Buscar"
+               aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">
+          Buscar
+        </button>
+      </form>
     </div>
-  </nav>
+  </div>
+</nav>
+  <h5 class="section-label">Clases principales</h5>
 
-  <!-- CLASES PRINCIPALES -->
-  <h3 class="component-title mt-5" style="font-size:1.3rem;">Clases principales</h3>
-
-  <ul class="feature-list">
-    <li><code>.navbar</code> (Contenedor principal)</li>
-    <li><code>.navbar-brand</code> (Logo o nombre)</li>
-    <li><code>.navbar-toggler</code> (Botón hamburguesa)</li>
-    <li><code>.navbar-collapse</code> (Contenido que se colapsa)</li>
-    <li><code>.navbar-nav</code> (Lista de enlaces)</li>
-    <li><code>.nav-item</code> (Elemento de la lista)</li>
-    <li><code>.nav-link</code> (Enlace individual)</li>
-  </ul>
-
-  <!-- DATO FINAL -->
-  <div class="code-block mt-4">
-    <div class="code-label">Dato</div>
-    <code>
-Usualmente se combina con .container o .container-fluid para organizar el contenido.
-    </code>
+  <div class="code-block">
+    <table class="custom-table">
+  <thead>
+    <tr>
+      <th>Clase</th>
+      <th>Función</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>.navbar</code></td>
+      <td>Contenedor principal del componente</td>
+    </tr>
+    <tr>
+      <td><code>.navbar-brand</code></td>
+      <td>Logo o nombre de la marca</td>
+    </tr>
+    <tr>
+      <td><code>.navbar-toggler</code></td>
+      <td>Botón hamburguesa para pantallas pequeñas</td>
+    </tr>
+    <tr>
+      <td><code>.navbar-collapse</code></td>
+      <td>Contenido que se colapsa en móviles</td>
+    </tr>
+    <tr>
+      <td><code>.navbar-nav</code></td>
+      <td>Lista de elementos de navegación</td>
+    </tr>
+    <tr>
+      <td><code>.nav-item</code></td>
+      <td>Elemento individual dentro de la lista</td>
+    </tr>
+    <tr>
+      <td><code>.nav-link</code></td>
+      <td>Enlace dentro del Navbar</td>
+    </tr>
+    <tr>
+      <td><code>.dropdown</code></td>
+      <td>Contenedor para menús desplegables</td>
+    </tr>
+    <tr>
+      <td><code>.dropdown-menu</code></td>
+      <td>Lista del menú desplegable</td>
+    </tr>
+    <tr>
+      <td><code>.dropdown-item</code></td>
+      <td>Elemento dentro del dropdown</td>
+    </tr>
+  </tbody>
+</table>
   </div>
 
-</div>
   `
 })
-export class Navbar{}
+export class Navbar { }

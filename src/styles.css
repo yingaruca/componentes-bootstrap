@@ -266,8 +266,7 @@ code {
 }
 
 .code-block {
-    background: var(--bg-tertiary);
-    border: 1px solid var(--border);
+
     border-radius: 8px;
     padding: 1rem;
     margin: 1rem 0;
@@ -409,3 +408,43 @@ code {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(24, 24, 27, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+/* Tabla estilo documentación */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.custom-table thead {
+    background: var(--bg-secondary);
+}
+
+.custom-table th {
+    text-align: left;
+    padding: 0.9rem 1rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+}
+
+.custom-table td {
+    padding: 0.9rem 1rem;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border);
+}
+
+.custom-table tr:last-child td {
+    border-bottom: none;
+}
+
+.custom-table code {
+    background: var(--bg-secondary);
+    color: var(--accent);
+    font-weight: 600;
+}
