@@ -1,12 +1,17 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { NavbarLayout } from './navbar-layout';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [RouterModule, NavbarLayout],
+  template: `
+<app-navbar-layout></app-navbar-layout>
+
+<div class="container-custom" style="margin-top:120px;">
+  <router-outlet></router-outlet>
+</div>
+`
 })
-export class App {
-  protected readonly title = signal('bootstrap-components');
-}
+export class App {}
