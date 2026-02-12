@@ -1,0 +1,128 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-closebutton',
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+<div class="component-section">
+
+  <div class="component-header">
+    <span class="component-number">03</span>
+    <h2 class="component-title">Close Button</h2>
+  </div>
+
+  <!-- ¿QUÉ ES? -->
+  <h3 class="component-title mt-3" style="font-size:1.3rem;">¿Qué es?</h3>
+
+  <p class="component-desc">
+    Es un botón de cierre estandarizado para cerrar componentes como
+    modales, alertas y offcanvas.
+  </p>
+
+  <!-- CARACTERÍSTICAS -->
+  <h3 class="component-title mt-4" style="font-size:1.3rem;">Características</h3>
+
+  <ul class="feature-list">
+    <li>Ícono visual sin texto</li>
+    <li>Variantes para fondos oscuros</li>
+    <li>Accesible con aria-label</li>
+    <li>Personalizable con CSS</li>
+  </ul>
+
+  <!-- DEMO FUNCIONAL -->
+  <div style="margin-top: 1.5rem;">
+    <div class="demo-alert alert alert-dark alert-dismissible fade show"
+         *ngFor="let alert of alerts">
+
+      <span>{{ alert }}</span>
+
+      <button type="button"
+              class="btn-close .btn-close-white"
+              data-bs-dismiss="alert"
+              aria-label="Close">
+      </button>
+
+    </div>
+  </div>
+<!-- CLASES PRINCIPALES -->
+<h5 class="section-label">Clases principales</h5>
+
+<div class="code-block">
+  <table class="custom-table">
+    <thead>
+      <tr>
+        <th>Clase</th>
+        <th>Función</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>.btn-close</code></td>
+        <td>Botón de cierre básico de Bootstrap</td>
+      </tr>
+      <tr>
+        <td><code>.btn-close-white</code></td>
+        <td>Variante para fondos oscuros (obsoleta desde v5.3)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ATRIBUTOS IMPORTANTES -->
+<h5 class="section-label">Atributos importantes</h5>
+
+<div class="code-block">
+  <table class="custom-table">
+    <thead>
+      <tr>
+        <th>Atributo</th>
+        <th>Función</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>data-bs-dismiss="modal"</code></td>
+        <td>Cierra un modal</td>
+      </tr>
+      <tr>
+        <td><code>data-bs-dismiss="offcanvas"</code></td>
+        <td>Cierra un offcanvas</td>
+      </tr>
+      <tr>
+        <td><code>data-bs-dismiss="alert"</code></td>
+        <td>Cierra una alerta</td>
+      </tr>
+      <tr>
+        <td><code>aria-label="Close"</code></td>
+        <td>Mejora la accesibilidad</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+  <!-- DATO -->
+  <div class="code-block mt-4">
+    <div class="code-label">Dato</div>
+    <code>
+        No necesita texto porque Bootstrap ya incluye el ícono SVG internamente.
+    </code>
+  </div>
+
+</div>
+  `
+})
+export class CloseButton {
+
+  alerts = [
+    'Esta alerta se puede cerrar',
+    'Otra alerta con close button',
+    'El botón incluye aria-label="Close" para accesibilidad'
+  ];
+
+  close(alert: string) {
+    this.alerts = this.alerts.filter(a => a !== alert);
+  }
+}
