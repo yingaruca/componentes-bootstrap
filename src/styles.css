@@ -119,6 +119,7 @@ code {
     background: var(--bg-secondary);
     border-left: 1px solid var(--border);
     width: 320px !important;
+    color:white;
 }
 
 .offcanvas-header {
@@ -138,7 +139,7 @@ code {
     transition: var(--transition);
 }
 
-.btn-close-white {
+.close-white {
     filter: invert(1) brightness(200%) !important;
     opacity: 1 !important;
 }

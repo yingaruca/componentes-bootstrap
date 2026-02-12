@@ -1,0 +1,110 @@
+
+<div class="component-section">
+
+    <div class="component-header">
+      <span class="component-number">02</span>
+      <h2 class="component-title">Offcanvas</h2>
+    </div>
+  
+    <!-- ¿QUÉ ES? -->
+    <h3 class="component-title mt-3" style="font-size:1.3rem;">¿Qué es?</h3>
+  
+    <p class="component-desc">
+      Es un panel lateral deslizante que aparece desde un borde de la pantalla.
+      Se usa mayormente en menús en dispositivos móviles, paneles de configuración,
+      carrito de compra o contenido secundario.
+    </p>
+  
+    <!-- CARACTERÍSTICAS -->
+    <h3 class="component-title mt-4" style="font-size:1.3rem;">Características</h3>
+  
+    <ul class="feature-list">
+      <li>Se puede deslizar desde arriba, abajo, izquierda o derecha</li>
+      <li>Fondo oscuro opcional (backdrop)</li>
+      <li>Muy bueno para navegación móvil</li>
+      <li>Ideal para contenido secundario</li>
+      <li>Se puede cerrar con botón o tecla ESC</li>
+    </ul>
+  
+    <!-- BOTÓN DEMO -->
+    <button class="demo-cta mt-3"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#demoOffcanvas">
+      Abrir ejemplo
+      <span>→</span>
+    </button>
+  
+    <!-- OFFCANVAS FUNCIONAL -->
+    <div class="offcanvas offcanvas-end"
+         tabindex="-1"
+         id="demoOffcanvas">
+  
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Ejemplo Offcanvas</h5>
+        <button type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas">
+        </button>
+      </div>
+  
+      <div class="offcanvas-body">
+        <p>Este es un ejemplo funcional de Offcanvas.</p>
+        <p>Puedes cerrarlo con:</p>
+        <ul>
+          <li>Botón de cierre</li>
+          <li>Tecla ESC</li>
+          <li>Click fuera</li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- CLASES PRINCIPALES -->
+    <h5 class="section-label">Clases principales</h5>
+  
+  <div class="code-block">
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>Clase</th>
+          <th>Función</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>.offcanvas</code></td>
+          <td>Contenedor principal</td>
+        </tr>
+        <tr>
+          <td><code>.offcanvas-start</code></td>
+          <td>Desde la izquierda</td>
+        </tr>
+        <tr>
+          <td><code>.offcanvas-end</code></td>
+          <td>Desde la derecha</td>
+        </tr>
+        <tr>
+          <td><code>.offcanvas-bottom</code></td>
+          <td>Desde abajo</td>
+        </tr>
+        <tr>
+          <td><code>.offcanvas-header</code></td>
+          <td>Encabezado</td>
+        </tr>
+        <tr>
+          <td><code>.offcanvas-body</code></td>
+          <td>Contenido</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    <!-- DATO -->
+    <div class="code-block mt-4">
+      <div class="code-label">Dato</div>
+      <code>
+  Funciona con atributos como data-bs-toggle="offcanvas"
+  y data-bs-target="#id".
+      </code>
+    </div>
+  
+  </div>
