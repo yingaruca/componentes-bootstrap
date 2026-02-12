@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+//Es un componente independiente, significa que no necesita estar dentro de un módulo.”
 @Component({
   selector: 'app-closebutton',
   standalone: true,
